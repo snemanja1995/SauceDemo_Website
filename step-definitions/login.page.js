@@ -1,6 +1,7 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 
-import LoginPage from '../pageobjects/login.page.js';
+import LoginPage from '../pageobjects/login.js';
+import HomePage from '../pageobjects/home.page.js';
 
 Given(/^User is on login page$/, async () => {
     await browser.url("/");
@@ -15,5 +16,5 @@ When(/^Clicks login button$/, async () => {
 });
 
 Then(/^User is logged in$/, async () => {
-    await browser.pause(10000);
+    await HomePage.checkIfUserIsLogIn();
 });

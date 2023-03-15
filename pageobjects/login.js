@@ -14,7 +14,7 @@ class LoginPage {
 
 
     async enterUsernameandPassword() {
-        await this.usernameField.setValue("standard_user");
+        await this.usernameField.setValue("standard");
         await this.passwordField.setValue("secret_sauce");
 
     }
