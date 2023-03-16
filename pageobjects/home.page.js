@@ -7,13 +7,13 @@ class HomePage {
     }
 
     get productText() {
-        return $("//span[@class='title']")
+        return $("//span[@class='title']");
     }
 
     async checkIfUserIsLogIn() {
         assert.strictEqual(await this.cartOption.isDisplayed(), true);
-        assert.strictEqual(await this.productText.getText(),"Products")
-        assert.strictEqual(await browser.getUrl(),"https://www.saucedemo.com/inventory.html")
+        assert.strictEqual(await this.productText.getText(),"Products");
+        assert.strictEqual(await browser.getUrl(),"https://www.saucedemo.com/inventory.html");
     }
 
 }
